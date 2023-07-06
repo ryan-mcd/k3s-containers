@@ -1,3 +1,4 @@
+ARG VERSION
 FROM rancher/k3s:${VERSION} as k3s
 FROM ghcr.io/onedr0p/alpine:rolling@sha256:4b666f73ee079b4feac9527fae3b0e60b0e9883213758bdb28af852c9acb4efe as builder
 
