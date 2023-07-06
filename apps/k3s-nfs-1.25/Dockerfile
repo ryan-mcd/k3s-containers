@@ -1,10 +1,11 @@
+FROM rancher/k3s:${VERSION} as k3s
 FROM ghcr.io/onedr0p/alpine:rolling@sha256:4b666f73ee079b4feac9527fae3b0e60b0e9883213758bdb28af852c9acb4efe as builder
 
 ARG TARGETPLATFORM
 ARG VERSION
 ARG CHANNEL
 
-COPY --from=rancher/k3s:${VERSION} /bin /bins
+COPY --from=k3s /bin /bins
 
 RUN set -ex; \
     mv /bins/aux /bin/aux; \
