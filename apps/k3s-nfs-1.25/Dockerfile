@@ -4,7 +4,7 @@ ARG TARGETPLATFORM
 ARG VERSION
 ARG CHANNEL
 
-COPY --from=rancher/k3s:v1.25.6-k3s1 /bin /bins
+COPY --from=rancher/k3s:${VERSION} /bin /bins
 
 RUN set -ex; \
     mv /bins/aux /bin/aux; \
