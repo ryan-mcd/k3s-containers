@@ -35,7 +35,7 @@ VOLUME /var/log
 ENV PATH="$PATH:/bin/aux"
 ENV CRI_CONFIG_FILE="/var/lib/rancher/k3s/agent/etc/crictl.yaml"
 
-COPY k3d-entrypoint-nfs.sh /bin/
+COPY ./apps/k3s-nfs-1.26/k3d-entrypoint-nfs.sh /bin/
 
 RUN chmod +x /bin/k3d-entrypoint-nfs.sh
 # ENTRYPOINT ["/bin/k3d-entrypoint-nfs.sh"]
