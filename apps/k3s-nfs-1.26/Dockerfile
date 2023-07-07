@@ -35,7 +35,11 @@ VOLUME /var/log
 ENV PATH="$PATH:/bin/aux"
 ENV CRI_CONFIG_FILE="/var/lib/rancher/k3s/agent/etc/crictl.yaml"
 
+COPY k3d-entrypoint-nfs.sh /bin/
+
+RUN chmod +x /bin/k3d-entrypoint-nfs.sh
+# ENTRYPOINT ["/bin/k3d-entrypoint-nfs.sh"]
+
 ENTRYPOINT ["/bin/k3s"]
 CMD ["agent"]
-
 LABEL org.opencontainers.image.source="https://github.com/k3s-io/k3s"
