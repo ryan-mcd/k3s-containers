@@ -23,7 +23,7 @@ RUN rm -rf /bin
 COPY --from=builder /bin /bin
 
 RUN set -ex; \
-    apk add --no-cache iptables ip6tables nfs-utils rpcbind openrc; \
+    apk add --no-cache nfs-utils rpcbind openrc; \
     echo 'hosts: files dns' > /etc/nsswitch.conf; 
 
 RUN rc-update add rpcbind && \
@@ -31,7 +31,6 @@ RUN rc-update add rpcbind && \
 
 RUN mkdir -p /run/openrc
 RUN touch /run/openrc/softlevel
-
 
 VOLUME /var/lib/kubelet
 VOLUME /var/lib/rancher/k3s
