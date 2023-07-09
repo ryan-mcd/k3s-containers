@@ -20,12 +20,18 @@ ARG VERSION
 ARG CHANNEL
 
 RUN rm -rf /bin
-
 COPY --from=builder /bin /bin
 
 RUN set -ex; \
-    apk add --no-cache nfs-utils; \
+    apk add --no-cache iptables ip6tables nfs-utils rpcbind openrc; \
     echo 'hosts: files dns' > /etc/nsswitch.conf; 
+
+RUN rc-update add rpcbind && \
+    rc-update add nfs
+
+RUN mkdir -p /run/openrc
+RUN touch /run/openrc/softlevel
+
 
 VOLUME /var/lib/kubelet
 VOLUME /var/lib/rancher/k3s
@@ -40,6 +46,6 @@ COPY ./apps/k3s-nfs-1.26/k3d-entrypoint-nfs.sh /bin/
 RUN chmod +x /bin/k3d-entrypoint-nfs.sh
 ENTRYPOINT ["/bin/k3d-entrypoint-nfs.sh"]
 
-ENTRYPOINT ["/bin/k3s"]
+# ENTRYPOINT ["/bin/k3s"]
 CMD ["agent"]
 LABEL org.opencontainers.image.source="https://github.com/k3s-io/k3s"
