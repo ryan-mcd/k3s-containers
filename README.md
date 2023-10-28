@@ -1,4 +1,23 @@
-# Container images
+<!---
+NOTE: AUTO-GENERATED FILE
+to edit this file, instead edit its template at: ./github/scripts/templates/README.md.j2
+-->
+<div align="center">
+
+
+## Containers
+
+_A Collection of Container Images Optimized for Kubernetes_
+
+</div>
+
+<div align="center">
+
+![GitHub Repo stars](https://img.shields.io/github/stars/onedr0p/containers?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/onedr0p/containers?style=for-the-badge)
+![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/onedr0p/containers/release-scheduled.yaml?style=for-the-badge&label=Scheduled%20Release)
+
+</div>
 
 Welcome to our container images, if looking for a container start by [browsing the container packages](https://github.com/onedr0p?tab=packages&repo_name=containers).
 
@@ -10,9 +29,9 @@ We also try to adhere to a [KISS principle](https://en.wikipedia.org/wiki/KISS_p
 
 ## Tag immutability
 
-The containers built here do not use immutable tags, as least not in the more common way you have seen from [linuxserver.io](https://fleet.linuxserver.io/) or [Bitnami](https://bitnami.com/stacks/containers). 
+The containers built here do not use immutable tags, as least not in the more common way you have seen from [linuxserver.io](https://fleet.linuxserver.io/) or [Bitnami](https://bitnami.com/stacks/containers).
 
-We take do take a similar approach but instead of appending a `-ls69` or `-r420` prefix to the tag we instead insist on pinning to the sha256 digest of the image, while this is not as pretty it is just as functional in making the images immutable.
+We do take a similar approach but instead of appending a `-ls69` or `-r420` prefix to the tag we instead insist on pinning to the sha256 digest of the image, while this is not as pretty it is just as functional in making the images immutable.
 
 | Container                                          | Immutable |
 |----------------------------------------------------|-----------|
@@ -41,6 +60,19 @@ Some applications do not support defining configuration via environment variable
 ## Configuration volume
 
 For applications that need to have persistent configuration data the config volume is hardcoded to `/config` inside the container. This is not able to be changed in most cases.
+
+## Available Images
+
+Each Image will be built with a `rolling` tag, along with tags specific to it's version. Available Images Below
+
+Container | Channel | Image | Latest Tags
+--- | --- | --- | ---
+[k3s]() | stable | ghcr.io/onedr0p/k3s |
+[k3s]() | stable | ghcr.io/onedr0p/k3s |
+[k3s]() | stable | ghcr.io/onedr0p/k3s |
+[k3s]() | stable | ghcr.io/onedr0p/k3s |
+[k3s]() | stable | ghcr.io/onedr0p/k3s |
+
 
 ## Contributing
 
@@ -81,7 +113,6 @@ Containers here can be **deprecated** at any point, this could be for any reason
 4. The **maintenance burden** of keeping the container here **is too bothersome**
 
 **Note**: Deprecated containers will remained published to this repo for 6 months after which they will be pruned.
-
 ## Credits
 
 A lot of inspiration and ideas are thanks to the hard work of [hotio.dev](https://hotio.dev/) and [linuxserver.io](https://www.linuxserver.io/) contributors.
