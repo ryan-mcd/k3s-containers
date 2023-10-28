@@ -24,6 +24,8 @@ env:
   LOG_LEVEL: debug
   RENOVATE_DRY_RUN: false
   RENOVATE_CONFIG_FILE: .github/renovate.json5
+  RENOVATE_AUTODISCOVER: true
+  RENOVATE_AUTODISCOVER_FILTER: "${{ github.repository }}"
 
 jobs:
   renovate:
@@ -31,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608 # v4.1.0
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
 
       - name: Generate Token
         uses: tibdex/github-app-token@3beb63f4bd073e61482598c45c71c1019b59b73a # v2.1.0
@@ -46,7 +48,7 @@ jobs:
           echo "LOG_LEVEL=${{ github.event.inputs.logLevel || env.LOG_LEVEL }}" >> "${GITHUB_ENV}"
 
       - name: Renovate
-        uses: renovatebot/github-action@0dbf03d3f50da30b8e523f51b628d2743c4934dc # v39.0.6
+        uses: renovatebot/github-action@5c6c06aa0e3d7a6a9b6cba05c078c51631b5f11a # v39.1.1
         with:
           configurationFile: "${{ env.RENOVATE_CONFIG_FILE }}"
           token: "${{ steps.generate-token.outputs.token }}"

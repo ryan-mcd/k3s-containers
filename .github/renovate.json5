@@ -8,10 +8,10 @@
     ":automergeDigest"
   ],
   "platform": "github",
-  "repositories": ["ryan-mcd/k3s-containers"],
+  "username": "rmcd-bot[bot]",
   "onboarding": false,
   "requireConfig": "optional",
-  "gitAuthor": "Ryan McDaniel  <Ryan-McD@users.noreply.github.com>",
+  "gitAuthor": "rmcd-bot <140569405+rmcd-bot[bot]@users.noreply.github.com>",
   "dependencyDashboardTitle": "Renovate Dashboard 🤖",
   "suppressNotifications": ["prIgnoreNotification"],
   "commitBodyTable": true,

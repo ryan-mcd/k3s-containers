@@ -1,5 +1,5 @@
 ---
-name: "Manual Release"
+name: Scheduled Release
 
 concurrency:
   group: container-release
@@ -8,21 +8,18 @@ concurrency:
 on:
   workflow_dispatch:
     inputs:
-      app:
-        description: "Apps (ex: radarr,sonarr)"
-        default: ""
-        required: true
-      channels:
-        description: "Channels (ex: master,develop)"
-        default: ""
-        required: true
-      push:
-        description: "Push"
+      appsToBuild:
+        description: "Which apps to release"
+        required: false
+        type: string
+        default: "all"
+      force:
+        description: "Rebuild images regardless of whether version has changed"
         type: boolean
-        default: true
+        default: false
         required: true
-env:
-  TOKEN: ${{ secrets.TOKEN }}
+  schedule:
+    - cron: "0 * * * *"
 
 jobs:
   simple-checks:
@@ -38,9 +35,8 @@ jobs:
       packages: write
     with:
       appsToBuild: ${{ inputs.appsToBuild }}
-      channelsToBuild: ${{ inputs.channelsToBuild }}
-      force: true
-      pushImages: ${{ fromJSON(inputs.push) }}
+      force: ${{ inputs.force == true }}
+      pushImages: true
       sendNotifications: true
 
   render-readme:
