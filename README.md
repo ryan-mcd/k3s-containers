@@ -67,11 +67,11 @@ Each Image will be built with a `rolling` tag, along with tags specific to it's 
 
 Container | Channel | Image | Latest Tags
 --- | --- | --- | ---
-[k3s]() | stable | ghcr.io/onedr0p/k3s |
-[k3s]() | stable | ghcr.io/onedr0p/k3s |
-[k3s]() | stable | ghcr.io/onedr0p/k3s |
-[k3s]() | stable | ghcr.io/onedr0p/k3s |
-[k3s]() | stable | ghcr.io/onedr0p/k3s |
+[k3s-nfs-1.25](https://github.com/ryan-mcd/containers/pkgs/container/k3s-nfs-1.25) | stable | ghcr.io/onedr0p/k3s-nfs-1.25 |![rolling](https://img.shields.io/badge/rolling-blue?style=flat-square) ![v1.25.13-k3s1](https://img.shields.io/badge/v1.25.13--k3s1-blue?style=flat-square)
+[k3s-nfs-1.26](https://github.com/ryan-mcd/containers/pkgs/container/k3s-nfs-1.26) | stable | ghcr.io/onedr0p/k3s-nfs-1.26 |![rolling](https://img.shields.io/badge/rolling-blue?style=flat-square) ![v1.26.9-k3s1](https://img.shields.io/badge/v1.26.9--k3s1-blue?style=flat-square)
+[k3s-nfs-1.27](https://github.com/ryan-mcd/containers/pkgs/container/k3s-nfs-1.27) | stable | ghcr.io/onedr0p/k3s-nfs-1.27 |![rolling](https://img.shields.io/badge/rolling-blue?style=flat-square) ![v1.27.6-k3s1](https://img.shields.io/badge/v1.27.6--k3s1-blue?style=flat-square)
+[k3s-nfs-1.28](https://github.com/ryan-mcd/containers/pkgs/container/k3s-nfs-1.28) | stable | ghcr.io/onedr0p/k3s-nfs-1.28 |![rolling](https://img.shields.io/badge/rolling-blue?style=flat-square) ![v1.28.2-k3s1](https://img.shields.io/badge/v1.28.2--k3s1-blue?style=flat-square)
+[k3s-nfs-stable](https://github.com/ryan-mcd/containers/pkgs/container/k3s-nfs-stable) | stable | ghcr.io/onedr0p/k3s-nfs-stable |![rolling](https://img.shields.io/badge/rolling-blue?style=flat-square) ![v1.27.6-k3s1](https://img.shields.io/badge/v1.27.6--k3s1-blue?style=flat-square)
 
 
 ## Contributing
