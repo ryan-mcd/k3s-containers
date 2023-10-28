@@ -8,7 +8,8 @@ ARG CHANNEL
 
 COPY --from=k3s /bin /bins
 
-RUN set -ex; \
+# RUN set -ex; \ # Maybe this will work again someday
+RUN set -x; \
     mv /bins/aux /bin/aux; \
     mv -n /bins/* /bin; \
     rm -rf /bins
