@@ -1,5 +1,5 @@
 {
-    "app": "k3s",
+    "app": "k3s-nfs-stable",
     "base": false,
     "channels": [
       {
