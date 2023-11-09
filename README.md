@@ -71,7 +71,7 @@ Container | Channel | Image | Latest Tags
 [k3s-nfs-1.26](https://github.com/ryan-mcd/containers/pkgs/container/k3s-nfs-1.26) | stable | ghcr.io/ryan-mcd/k3s-nfs-1.26 |![rolling](https://img.shields.io/badge/rolling-blue?style=flat-square) ![v1.26.10-k3s2](https://img.shields.io/badge/v1.26.10--k3s2-blue?style=flat-square)
 [k3s-nfs-1.27](https://github.com/ryan-mcd/containers/pkgs/container/k3s-nfs-1.27) | stable | ghcr.io/ryan-mcd/k3s-nfs-1.27 |![rolling](https://img.shields.io/badge/rolling-blue?style=flat-square) ![v1.27.7-k3s2](https://img.shields.io/badge/v1.27.7--k3s2-blue?style=flat-square)
 [k3s-nfs-1.28](https://github.com/ryan-mcd/containers/pkgs/container/k3s-nfs-1.28) | stable | ghcr.io/ryan-mcd/k3s-nfs-1.28 |![rolling](https://img.shields.io/badge/rolling-blue?style=flat-square) ![v1.28.3-k3s2](https://img.shields.io/badge/v1.28.3--k3s2-blue?style=flat-square)
-[k3s-nfs-stable](https://github.com/ryan-mcd/containers/pkgs/container/k3s-nfs-stable) | stable | ghcr.io/ryan-mcd/k3s-nfs-stable |![rolling](https://img.shields.io/badge/rolling-blue?style=flat-square) ![v1.27.7-k3s1](https://img.shields.io/badge/v1.27.7--k3s1-blue?style=flat-square)
+[k3s-nfs-stable](https://github.com/ryan-mcd/containers/pkgs/container/k3s-nfs-stable) | stable | ghcr.io/ryan-mcd/k3s-nfs-stable |![rolling](https://img.shields.io/badge/rolling-blue?style=flat-square) ![v1.27.7-k3s2](https://img.shields.io/badge/v1.27.7--k3s2-blue?style=flat-square)
 
 
 ## Contributing
