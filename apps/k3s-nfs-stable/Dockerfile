@@ -1,6 +1,6 @@
 ARG VERSION
 FROM rancher/k3s:${VERSION} as k3s
-FROM ghcr.io/onedr0p/alpine:rolling@sha256:b3d3b9e47e3b5736d045a5e9f2f1d1bbf5c1c38b8c0c296d4609079cfaf9a4bd as builder
+FROM ghcr.io/onedr0p/alpine:rolling@sha256:3fbc581cb0fe29830376161ae026e2a765dcc11e1747477fe9ebf155720b8638 as builder
 
 ARG TARGETPLATFORM
 ARG VERSION
@@ -14,7 +14,7 @@ RUN set -x; \
     mv -n /bins/* /bin; \
     rm -rf /bins
 
-FROM ghcr.io/onedr0p/alpine:rolling@sha256:b3d3b9e47e3b5736d045a5e9f2f1d1bbf5c1c38b8c0c296d4609079cfaf9a4bd
+FROM ghcr.io/onedr0p/alpine:rolling@sha256:3fbc581cb0fe29830376161ae026e2a765dcc11e1747477fe9ebf155720b8638
 
 ARG TARGETPLATFORM
 ARG VERSION
